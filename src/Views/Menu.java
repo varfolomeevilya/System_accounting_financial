@@ -503,7 +503,7 @@ public class Menu {
 
     public int menu09() {
 
-        System.out.println("9: Открыть кошелек");
+        System.out.println("9:Работа списком текущего затрат\n");
 
         onWallet3(scanner.nextInt());
         return 0;
