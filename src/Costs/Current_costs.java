@@ -1,6 +1,8 @@
 package Costs;
 
-public class Current_costs {
+import Cheques.Cheque;
+
+public class Current_costs extends Cheque {
     private String str;
     private double price;
     public Current_costs(){
@@ -29,4 +31,11 @@ public class Current_costs {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Current_costs{" +
+                "str='" + str + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

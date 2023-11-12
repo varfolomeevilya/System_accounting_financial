@@ -1,6 +1,8 @@
 package Costs;
 
-public class Potential_costs {
+import Cheques.Cheque;
+
+public class Potential_costs extends Cheque {
     private String str;
     private double price;
     public Potential_costs(){
@@ -29,4 +31,11 @@ public class Potential_costs {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Potential_costs{" +
+                "str='" + str + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

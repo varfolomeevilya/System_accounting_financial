@@ -1,6 +1,8 @@
 package Costs;
 
-public class Potential_income{ //создал класс понтециальный доход
+import Cheques.Cheque;
+
+public class Potential_income extends Cheque { //создал класс понтециальный доход
     private int prize;  // создал два поля
     private int salary;
     public Potential_income(){ // создал конструктор пустой
@@ -27,5 +29,13 @@ public class Potential_income{ //создал класс понтециальн�
 
     public void setSalary(int salary) {  // создал  сет зарплата
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Potential_income{" +
+                "prize=" + prize +
+                ", salary=" + salary +
+                '}';
     }
 }

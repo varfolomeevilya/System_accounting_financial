@@ -1,29 +1,30 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Wallet {
     private String name; // создал два поле
     private int summa;
-    private ArrayList<Integer>billsArray= new ArrayList<>();
+   private ArrayList<Integer>cheques=new ArrayList<>();
     private HashMap<String, Integer> credit_cards= new HashMap<>();
-    public Wallet(){ // создал конструктор пустой
+    private ArrayList<Integer> potentail_income = new ArrayList<>();
+    private HashMap<String, Double> current_costs = new HashMap<>();
+    private int potential_costs;
+
+    public Wallet(){ // создал конструктор
         this.name = "Ozon";
-        this.summa = 12;
+        this.summa = 125;
     }
 
     public Wallet(String name, int summa) { // создал конструктор по умолчанию
         this.name = name;
         this.summa = summa;
     }
-    public void addBill(int billsSum){ // добавления список чек
-        billsArray.add(billsSum);
+    public void addCheques(int chequesSum){ // добавления список чек
+        cheques.add(chequesSum);
     }
-    public void deleteBill(int billsSum){
-        billsArray.remove(billsSum);
+    public void deleteCheques(int chequeSum){
+        cheques.remove(chequeSum);
     }
     public void addCredit_cards(String credit_cards, Integer summa){ // добавления кредитная карта
        this.credit_cards.put(credit_cards, summa);
@@ -39,15 +40,15 @@ public class Wallet {
         }
         return sum;
     }
-    public int billsSumma(){
+    public int chequesSumma(){
         int sum=0;
-        for (int a : billsArray){
+        for (int a : cheques){
             sum+=a;
         }
         return sum;
     }
     public int allSumma(){
-        return billsSumma() + credit_cardsSumma();
+        return chequesSumma() + credit_cardsSumma();
     }
     public String getName() { // создал гетер название
         return name;
@@ -63,6 +64,41 @@ public class Wallet {
 
     public void setSumma(int summa) { // создал сетер сумма
         this.summa = summa;
+    }
+
+    public ArrayList<Integer> getCheques() {
+        return cheques;
+    }
+
+    public void setCheques(ArrayList<Integer> cheques) {
+        this.cheques = cheques;
+    }
+
+    public HashMap<String, Integer> getCredit_cards() {
+        return credit_cards;
+    }
+
+    public void setCredit_cards(HashMap<String, Integer> credit_cards) {
+        this.credit_cards = credit_cards;
+    }
+
+    public ArrayList<Integer> getPotentail_income() {
+        return potentail_income;
+    }
+
+    public void setPotentail_income(ArrayList<Integer> potentail_income) {
+        this.potentail_income = potentail_income;
+    }
+
+    public HashMap<String, Double> getCurrent_costs() {
+        return current_costs;
+    }
+
+    public void setCurrent_costs(HashMap<String, Double> current_costs) {
+        this.current_costs = current_costs;
+    }
+    public int getPotential_costs(){
+        return potential_costs;
     }
     public void print(){
         System.out.println("Name:" + name);
