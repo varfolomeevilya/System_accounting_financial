@@ -53,6 +53,7 @@ public class Operation {
    public void menu1(){
        System.out.println("1:Открыть кошелёк");
        System.out.println("2:Получение деньги по всем кошелькам");
+
        System.out.println("3:Добавить редактирование информацию кошелька");
        System.out.println("4:Удаление редактирование информации кошелёк");
    }
