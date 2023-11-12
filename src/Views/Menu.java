@@ -232,7 +232,7 @@ public class Menu {
             case 1 -> {
                 menu01();
                 wallet.chequesSumma();
-                System.out.println("Ложить деньги кошелька");
+                System.out.println("Открыть кошелек");
                 break;
             }
             case 2 -> {
@@ -283,7 +283,7 @@ public class Menu {
             case 1 -> {
                 menu01();
                 wallet.chequesSumma();
-                System.out.println("Ложить деньги кошелька");
+                System.out.println("Открыть кошелек");
                 break;
             }
             case 2 -> {
@@ -338,7 +338,7 @@ public class Menu {
             case 1 -> {
                 menu01();
                 wallet.chequesSumma();
-                System.out.println("Ложить деньги кошелька");
+                System.out.println("Открыть кошелек");
                 break;
             }
             case 2 -> {
@@ -423,15 +423,24 @@ public class Menu {
 
     public int menu01() {
 
-        System.out.println("1:Ложить деньги кошелька");
-        wallet.addCheques(100);
+     
+         System.out.println("1:Открыть кошелёк");
+       System.out.println("2:Получение деньги по всем кошелькам");
+
+       System.out.println("3:Добавить редактирование информацию кошелька");
+       System.out.println("4:Удаление редактирование информации кошелёк");
         onWallet1(scanner.nextInt());
         return menu01();
     }
 
     public int menu02() {
-
-        System.out.println("2: Получение деньги по всем кошелькам\n");
+  System.out.println("1: Открыть кошелёк\n" +
+               "2: Получение деньги по всем кошелькам\n" +
+               "3: Добавить редактирование информацию кошелька\n" +
+               "5:Получение деньги по всем картам" +
+               "6:Открыть кредитную карту" +
+               "7:Получение деньги по всем картам"
+      
         wallet.chequesSumma();
         onWallet2(scanner.nextInt());
         return menu02();
@@ -439,7 +448,17 @@ public class Menu {
 
     public int menu03() {
 
-        System.out.println("3: Добавить редактирование информацию кошелька\n");
+       System.out.println("1: Открыть кошелёк\n" +
+               "2: Получение деньги по всем кошелькам\n" +
+
+               "5:Открыть кредитную карту\n" +
+               "7:Получение деньги по всем картам\n" +
+               "8:Получение деньги по всем кошелькам картам\n" +
+               "9:Добавить редактирование информацию кредитной карты\n" +
+
+               "11: Работа со списком потенциальный затрат\n" +
+               "12: Работа со списком текущих затрат\n" +
+               "13: Работа со списком потенциальный доход\n");
        wallet.addCheques(100);
 
         onWallet3(scanner.nextInt());
