@@ -2,7 +2,7 @@ package Costs;
 
 import Cheques.Cheque;
 
-public class Potential_income extends Cheque { //создал класс понтециальный доход
+public class Potential_income  { //создал класс понтециальный доход
     private int prize;  // создал два поля
     private int salary;
     public Potential_income(){ // создал конструктор пустой

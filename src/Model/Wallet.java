@@ -100,11 +100,16 @@ public class Wallet {
         System.out.println("Name:" + name);
         System.out.println("Summa:" + summa);
     }
+
     @Override
     public String toString() {
-        return "Model.Wallet{" +
+        return "Wallet{" +
                 "name='" + name + '\'' +
                 ", summa=" + summa +
+                ", cheques=" + cheques +
+                ", credit_cards=" + credit_cards +
+                ", potentail_income=" + potentail_income +
+                ", current_costs=" + current_costs +
                 '}';
     }
 }

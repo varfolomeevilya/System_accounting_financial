@@ -40,6 +40,7 @@ public class Main {
         System.out.println(mywallet.credit_cardsSumma());
         System.out.println(mywallet.chequesSumma());
         System.out.println(mywallet.allSumma());
+        System.out.println(mywallet.toString());
         mywallet.print();
         Menu menu = new Menu();
         menu.menu01();

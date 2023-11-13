@@ -2,7 +2,7 @@ package Costs;
 
 import Cheques.Cheque;
 
-public class Potential_costs extends Cheque {
+public class Potential_costs {
     private String str;
     private double price;
     public Potential_costs(){
