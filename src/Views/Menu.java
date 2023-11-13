@@ -15,7 +15,7 @@ public class Menu {
     private Potential_costs potential_costs;
     private Potential_income potential_income;
 
-    private final Scanner scanner = new Scanner(System.in);
+    private  Scanner scanner = new Scanner(System.in);
 
     public Menu() {
     }
@@ -30,7 +30,6 @@ public class Menu {
 
     public void menuController() {
         if (menu01() == 1) {
-            wallet.chequesSumma();
         } else if (menu02() == 2) {
             wallet.allSumma();
         } else if (menu03() == 3) {
@@ -50,7 +49,7 @@ public class Menu {
         } else if (menu08() == 8) {
             current_costs.getStr();
         } else if (menu09() == 9) {
-            System.out.println("9: Открыть кошелек");
+           credit_card.deleteCredit_cards("Tinroff", 125);
         } else if (menu10() == 10) {
             potential_costs.getStr();
         }
@@ -64,8 +63,8 @@ public class Menu {
         }
     }
 
-    public void onWallet1(int i) {
-        switch (i) {
+    public void onWallet1(int a) {
+        switch (a) {
             case 1 -> {
                 menu01();
                 System.out.println("Открыть кошелек");
@@ -79,6 +78,7 @@ public class Menu {
             }
             case 3 -> {
                 menu03();
+                wallet.addCheques(3100);
                 System.out.println("Добавление деньги в кошелька");
                 break;
             }
@@ -90,8 +90,8 @@ public class Menu {
         }
     }
 
-    public void onWallet2(int i) {
-        switch (i) {
+    public void onWallet2(int a) {
+        switch (a) {
             case 1 -> {
 
                 System.out.println("Открыть кошелек");
@@ -105,6 +105,7 @@ public class Menu {
             }
             case 3 -> {
                 menu03();
+                wallet.addCheques(3100);
                 System.out.println("Добавление деньги в кошелька");
                 break;
             }
@@ -140,8 +141,8 @@ public class Menu {
 
     }
 
-    public void onWallet3(int i) {
-        switch (i) {
+    public void onWallet3(int a) {
+        switch (a) {
             case 1 -> {
                 menu01();
 
@@ -156,7 +157,7 @@ public class Menu {
             }
             case 3 -> {
                 menu03();
-
+                wallet.addCheques(3100);
                 System.out.println("Добавление деньги в кошелька");
                 break;
             }
@@ -227,12 +228,12 @@ public class Menu {
     }
 
 
-    public void WalletMenu1(int i) {
-        switch (i) {
+    public void WalletMenu1(int a) {
+        switch (a) {
             case 1 -> {
                 menu01();
-                wallet.chequesSumma();
-                System.out.println("Ложить деньги кошелька");
+
+                System.out.println("Открыть кошелек");
                 break;
             }
             case 2 -> {
@@ -278,12 +279,12 @@ public class Menu {
     }
 
 
-    public void WalletMenu2(int i) {
-        switch (i) {
+    public void WalletMenu2(int a) {
+        switch (a) {
             case 1 -> {
                 menu01();
-                wallet.chequesSumma();
-                System.out.println("Ложить деньги кошелька");
+
+                System.out.println("Открыть кошелек");
                 break;
             }
             case 2 -> {
@@ -333,23 +334,25 @@ public class Menu {
     }
 
 
-    public void WalletMenu3(int i) {
-        switch (i) {
+    public void WalletMenu3(int a) {
+        switch (a) {
             case 1 -> {
                 menu01();
-                wallet.chequesSumma();
-                System.out.println("Ложить деньги кошелька");
+
+                System.out.println("Открыть кошелек");
                 break;
             }
             case 2 -> {
                 menu02();
                 wallet.allSumma();
                 System.out.println("Получение деньги кошелька");
+
                 break;
             }
             case 3 -> {
                 menu03();
                 wallet.addCheques(3100);
+
                 System.out.println("Добавление деньги информации кошелька");
                 break;
             }
@@ -423,24 +426,48 @@ public class Menu {
 
     public int menu01() {
 
-        System.out.println("1:Ложить деньги кошелька");
-        wallet.addCheques(100);
+        System.out.println("1:Открыть кошелёк");
+        System.out.println("2:Получение деньги по всем кошелькам");
+
+        System.out.println("3:Добавить редактирование информацию кошелька");
+        System.out.println("4:Удаление редактирование информации кошелёк");
+
         onWallet1(scanner.nextInt());
         return menu01();
     }
 
     public int menu02() {
 
+        System.out.println("1: Открыть кошелёк\n");
         System.out.println("2: Получение деньги по всем кошелькам\n");
-        wallet.chequesSumma();
+
+        System.out.println("3: Добавить редактирование информацию кошелька\n");
+        wallet.addCheques(3100);
+        System.out.println("5:Получение деньги по всем картам");
+        System.out.println("6:Открыть кредитную карту\n" );
+        System.out.println("7:Получение деньги по всем картам\n");
+
+
         onWallet2(scanner.nextInt());
-        return menu02();
+        return wallet.allSumma();
     }
 
     public int menu03() {
 
+        System.out.println("1: Открыть кошелёк\n");
+        System.out.println ("2: Получение деньги по всем кошелькам\n");
         System.out.println("3: Добавить редактирование информацию кошелька\n");
-       wallet.addCheques(100);
+        wallet.addCheques(100);
+        System.out.println("4:Удаление редактирование информации кошелёк");
+        System.out.println( "5:Открыть кредитную карту\n");
+        System.out.println("7:Получение деньги по всем картам\n");
+        System.out.println( "8:Получение деньги по всем кошелькам картам\n" );
+        System.out.println("9:Добавить редактирование информацию кредитной карты\n" );
+        System.out.println("10: Работа со списком потенциальный затрат\n");
+        System.out.println("11: Работа со списком потенциальный затрат\n" );
+        System.out.println("12: Работа со списком текущих затрат\n" );
+        System.out.println("13: Работа со списком потенциальный доход\n");
+
 
         onWallet3(scanner.nextInt());
         
@@ -455,9 +482,9 @@ public class Menu {
     }
 
     public int menu05() {
-        System.out.println("0:Открыть кредитную карту\n");
+        System.out.println("5:Открыть кредитную карту\n");
         onWallet2(scanner.nextInt());
-        return 0;
+        return menu05();
     }
 
     public int menu06() {
@@ -479,15 +506,15 @@ public class Menu {
         current_costs.getStr();
 
         onWallet3(scanner.nextInt());
-        return 0;
+        return menu08();
     }
 
     public int menu09() {
 
-        System.out.println("9: Открыть кошелек");
+        System.out.println("9:Работа списком текущего затрат\n");
 
         onWallet3(scanner.nextInt());
-        return 0;
+        return menu09();
     }
 
     public int menu10() {

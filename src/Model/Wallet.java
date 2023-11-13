@@ -9,11 +9,10 @@ public class Wallet {
     private HashMap<String, Integer> credit_cards= new HashMap<>();
     private ArrayList<Integer> potentail_income = new ArrayList<>();
     private HashMap<String, Double> current_costs = new HashMap<>();
-    private int potential_costs;
 
     public Wallet(){ // создал конструктор
         this.name = "Ozon";
-        this.summa = 125;
+        this.summa = 135;
     }
 
     public Wallet(String name, int summa) { // создал конструктор по умолчанию
@@ -96,9 +95,6 @@ public class Wallet {
 
     public void setCurrent_costs(HashMap<String, Double> current_costs) {
         this.current_costs = current_costs;
-    }
-    public int getPotential_costs(){
-        return potential_costs;
     }
     public void print(){
         System.out.println("Name:" + name);

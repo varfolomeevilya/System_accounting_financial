@@ -1,3 +1,7 @@
+import Costs.Current_costs;
+import Costs.Potential_costs;
+import Costs.Potential_income;
+import Model.Credit_card;
 import Model.Wallet;
 import Operations.Operation;
 import Views.Menu;
