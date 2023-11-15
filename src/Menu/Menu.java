@@ -4,7 +4,7 @@ import Costs.Current_costs;
 import Costs.Potential_costs;
 import Costs.Potential_income;
 import Model.Wallet;
-import Operations.Operation;
+
 
 import java.util.Scanner;
 
@@ -17,7 +17,6 @@ public class Menu {
 
     public Menu() {
     }
-
     public Menu(Wallet wallet, Current_costs current_costs, Potential_costs potential_costs, Potential_income potential_income) {
         this.wallet = wallet;
         this.current_costs = current_costs;
