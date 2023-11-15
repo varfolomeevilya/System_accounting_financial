@@ -1,11 +1,15 @@
 package Model;
 
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Wallet {
     private String name; // создал два поле
     private int summa;
-   private ArrayList<Integer>cheques=new ArrayList<>();
+   private ArrayList<Integer> cheques=new ArrayList<>();
     private HashMap<String, Integer> credit_cards= new HashMap<>();
     private ArrayList<Integer> potentail_income = new ArrayList<>();
     private HashMap<String, Double> current_costs = new HashMap<>();
@@ -33,12 +37,13 @@ public class Wallet {
     }
     public int credit_cardsSumma(){
         int sum=0;
-        for (Iterator<Map.Entry<String, Integer>> iterator=credit_cards.entrySet().iterator();iterator.hasNext();){
+        for (Iterator<Map.Entry<String, Integer>> iterator = credit_cards.entrySet().iterator(); iterator.hasNext();){
           Map.Entry<String, Integer> pair = iterator.next();
           sum += pair.getValue();
         }
         return sum;
     }
+
     public int chequesSumma(){
         int sum=0;
         for (int a : cheques){
@@ -96,11 +101,6 @@ public class Wallet {
     public void setCurrent_costs(HashMap<String, Double> current_costs) {
         this.current_costs = current_costs;
     }
-    public void print(){
-        System.out.println("Name:" + name);
-        System.out.println("Summa:" + summa);
-    }
-
     @Override
     public String toString() {
         return "Wallet{" +

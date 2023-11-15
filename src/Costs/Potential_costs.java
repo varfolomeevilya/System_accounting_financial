@@ -1,6 +1,6 @@
 package Costs;
 
-import Cheques.Cheque;
+
 
 public class Potential_costs {
     private String str;

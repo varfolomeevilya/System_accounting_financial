@@ -1,10 +1,6 @@
-import Costs.Current_costs;
-import Costs.Potential_costs;
-import Costs.Potential_income;
-import Model.Credit_card;
 import Model.Wallet;
 import Operations.Operation;
-import Views.Menu;
+import Menu.Menu;
 
 
 import java.util.Scanner;
@@ -28,9 +24,8 @@ import java.util.Scanner;
 //        работы со списком потенциальных доходов
 public class Main {
     public static void main(String[] args)  {
-        Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
         Wallet mywallet = new Wallet();
+        Scanner scanner = new Scanner(System.in);
         int i=0;
         mywallet.addCheques(100);
         mywallet.addCheques(2000);
@@ -40,8 +35,8 @@ public class Main {
         System.out.println(mywallet.credit_cardsSumma());
         System.out.println(mywallet.chequesSumma());
         System.out.println(mywallet.allSumma());
-        System.out.println(mywallet.toString());
-        mywallet.print();
+        mywallet.toString();
+        System.out.println(mywallet.getCurrent_costs());
         Menu menu = new Menu();
         menu.menu01();
         menu.menu02();
@@ -54,8 +49,7 @@ public class Main {
         menu.menu09();
         menu.menu10();
         menu.menu11();
-        menu.menu12();
-        menu.menu13();
+        menu.toString();
         Operation operation= new Operation();
         operation.menu1();
         operation.menu2();
@@ -68,8 +62,6 @@ public class Main {
         operation.menu9();
         operation.menu10();
         operation.menu11();
-        operation.menu12();
-        operation.menu13();
        menu.menuController();
        menu.onWallet1(i);
        menu.onWallet2(i);
