@@ -8,5 +8,8 @@ public class Credit_card extends Wallet { // создал класс креди�
  public Credit_card(String name, int summa){
      super(name, summa);
  }
-
+ @Override
+    public String toString() {
+        return super.toString();
+    }
 }
