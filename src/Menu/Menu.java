@@ -468,24 +468,24 @@ public class Menu {
 
 
     public int menu01() {
-        if (menu02() == 2) {
-            wallet.allSumma();
-            System.out.println("Получение деньги кошелька");
-        }
-//        else {
+//        if (menu02() == 2) {
+//            wallet.allSumma();
 //            System.out.println("Получение деньги кошелька");
 //        }
+////        else {
+////            System.out.println("Получение деньги кошелька");
+////        }
         onWallet2(scanner.nextInt());
         return menu01();
     }
 
     public int menu02() {
-        if (menu01() == 1) {
-            System.out.println("Открыть кошелек");
-        }
-//        else{
-//
+//        if (menu01() == 1) {
+//            System.out.println("Открыть кошелек");
 //        }
+////      else{
+////         System.out.println("Открыть кошелек");
+////        }
         onWallet1(scanner.nextInt());
 
         return menu02();
@@ -493,13 +493,13 @@ public class Menu {
 
     public int menu03() {
 
-        if (menu04() == 4) {
-            wallet.deleteCheques(300);
-            System.out.println("Удаление деньги  кошелька");
-       }
-//        else {
+//        if (menu04() == 4) {
+//            wallet.deleteCheques(300);
 //            System.out.println("Удаление деньги  кошелька");
-//        }
+//       }
+////        else {
+////            System.out.println("Удаление деньги  кошелька");
+////        }
 
         onWallet3(scanner.nextInt());
 
@@ -507,35 +507,35 @@ public class Menu {
     }
 
     public int menu04() {
-        if (menu03() == 3) {
-            wallet.addCheques(3100);
-            System.out.println("Добавление деньги в кошелька");
-        }
-//        else {
+//        if (menu03() == 3) {
+//            wallet.addCheques(3100);
 //            System.out.println("Добавление деньги в кошелька");
 //        }
+////        else {
+////            System.out.println("Добавление деньги в кошелька");
+////        }
 
         onWallet2(scanner.nextInt());
         return menu04();
     }
 
     public int menu05() {
-        if (menu06()==6) {
-            wallet.addCredit_cards("Visa", 25000);
-            System.out.println("Добавить редактирование информацию кредитной карты");
-        }
-//        else {
+//        if (menu06()==6) {
+//            wallet.addCredit_cards("Visa", 25000);
 //            System.out.println("Добавить редактирование информацию кредитной карты");
 //        }
+////        else {
+////            System.out.println("Добавить редактирование информацию кредитной карты");
+////        }
         onWallet3(scanner.nextInt());
         return menu05();
     }
 
 
     public int menu06() {
-        if (menu05() == 5) {
-            System.out.println("Открыть кредитную карту");
-        }
+//        if (menu05() == 5) {
+//            System.out.println("Открыть кредитную карту");
+//        }
 //        else{
 //
 //        }
@@ -544,10 +544,10 @@ public class Menu {
     }
 
     public int menu07() {
-        if (menu08() == 8) {
-           wallet.credit_cardsSumma();
-            System.out.println("8:получения общей суммы по всем кошелькам и картам\n");
-        }
+//        if (menu08() == 8) {
+//           wallet.credit_cardsSumma();
+//            System.out.println("8:получения общей суммы по всем кошелькам и картам\n");
+//        }
 //        else{
 //            System.out.println("8:получения общей суммы по всем кошелькам и картам\n");
 //        }
@@ -556,10 +556,10 @@ public class Menu {
     }
 
     public int menu08() {
-        if (menu07() == 7) {
-            wallet.deleteCredit_cards("Mastercard", 50000);
-            System.out.println("7Удаление  кредитной карты");
-        }
+//        if (menu07() == 7) {
+//            wallet.deleteCredit_cards("Mastercard", 50000);
+//            System.out.println("7Удаление  кредитной карты");
+//        }
 //        else{
 //            System.out.println("7Удаление  кредитной карты");
 //        }
@@ -568,12 +568,12 @@ public class Menu {
     }
 
     public int menu09() {
-        if (menu10() == 10) {
-            potential_income.getPrize();
-
-            potential_income.getSalary();
-            System.out.println(" Работа со списком потенциальный доход");
-        }
+//        if (menu10() == 10) {
+//            potential_income.getPrize();
+//
+//            potential_income.getSalary();
+//            System.out.println(" Работа со списком потенциальный доход");
+//        }
 //        else{
 //            System.out.println(" Работа со списком потенциальный доход");
 //        }
@@ -582,11 +582,11 @@ public class Menu {
     }
 
     public int menu10() {
-        if (menu11() == 11) {
-            potential_income.getPrize();
-            potential_income.getSalary();
-            System.out.println(" Работа со списком потенциальный доход");
-        }
+//        if (menu11() == 11) {
+//            potential_income.getPrize();
+//            potential_income.getSalary();
+//            System.out.println(" Работа со списком потенциальный доход");
+//        }
 //        else{
 //            System.out.println(" Работа со списком потенциальный доход");
 //        }
@@ -595,11 +595,11 @@ public class Menu {
     }
 
     public int menu11() {
-       if (menu09() == 9) {
-            potential_costs.getStr();
-            potential_costs.getPrice();
-           System.out.println(" Работа со списком потенциальный затрат\n");
-        }
+//       if (menu09() == 9) {
+//            potential_costs.getStr();
+//            potential_costs.getPrice();
+//           System.out.println(" Работа со списком потенциальный затрат\n");
+//        }
 //        else {
 //           System.out.println(" Работа со списком потенциальный затрат\n");
 //         }
