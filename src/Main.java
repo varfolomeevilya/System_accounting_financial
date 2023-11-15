@@ -26,6 +26,7 @@ public class Main {
     public static void main(String[] args)  {
         Wallet mywallet = new Wallet();
         Scanner scanner = new Scanner(System.in);
+        int n= scanner.nextInt();
         int i=0;
         mywallet.addCheques(100);
         mywallet.addCheques(2000);
@@ -49,7 +50,6 @@ public class Main {
         menu.menu09();
         menu.menu10();
         menu.menu11();
-        menu.toString();
         Operation operation= new Operation();
         operation.menu1();
         operation.menu2();
