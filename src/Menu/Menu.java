@@ -473,21 +473,22 @@ public class Menu {
 //            System.out.println("Получение деньги кошелька");
 //        }
 ////        else {
-////            System.out.println("Получение деньги кошелька");
+////
 ////        }
+        System.out.println("Получение деньги кошелька");
         onWallet2(scanner.nextInt());
         return menu01();
     }
 
     public int menu02() {
 //        if (menu01() == 1) {
-//            System.out.println("Открыть кошелек");
+//                   System.out.println("Открыть кошелек");
 //        }
 ////      else{
-////         System.out.println("Открыть кошелек");
+////
 ////        }
         onWallet1(scanner.nextInt());
-
+        System.out.println("Открыть кошелек");
         return menu02();
     }
 
@@ -498,9 +499,9 @@ public class Menu {
 //            System.out.println("Удаление деньги  кошелька");
 //       }
 ////        else {
-////            System.out.println("Удаление деньги  кошелька");
+////
 ////        }
-
+        System.out.println("Удаление деньги  кошелька");
         onWallet3(scanner.nextInt());
 
         return menu03();
@@ -512,9 +513,9 @@ public class Menu {
 //            System.out.println("Добавление деньги в кошелька");
 //        }
 ////        else {
-////            System.out.println("Добавление деньги в кошелька");
+////
 ////        }
-
+        System.out.println("Добавление деньги в кошелька");
         onWallet2(scanner.nextInt());
         return menu04();
     }
@@ -525,8 +526,9 @@ public class Menu {
 //            System.out.println("Добавить редактирование информацию кредитной карты");
 //        }
 ////        else {
-////            System.out.println("Добавить редактирование информацию кредитной карты");
+////
 ////        }
+        System.out.println("Добавить редактирование информацию кредитной карты");
         onWallet3(scanner.nextInt());
         return menu05();
     }
@@ -539,6 +541,7 @@ public class Menu {
 //        else{
 //
 //        }
+        System.out.println("Открыть кредитную карту");
         onWallet2(scanner.nextInt());
         return menu06();
     }
@@ -549,8 +552,9 @@ public class Menu {
 //            System.out.println("8:получения общей суммы по всем кошелькам и картам\n");
 //        }
 //        else{
-//            System.out.println("8:получения общей суммы по всем кошелькам и картам\n");
+//
 //        }
+        System.out.println("8:получения общей суммы по всем кошелькам и картам\n");
         onWallet3(scanner.nextInt());
         return menu07();
     }
@@ -561,8 +565,9 @@ public class Menu {
 //            System.out.println("7Удаление  кредитной карты");
 //        }
 //        else{
-//            System.out.println("7Удаление  кредитной карты");
+//
 //        }
+        System.out.println("7Удаление  кредитной карты");
         onWallet2(scanner.nextInt());
         return menu08();
     }
@@ -575,8 +580,9 @@ public class Menu {
 //            System.out.println(" Работа со списком потенциальный доход");
 //        }
 //        else{
-//            System.out.println(" Работа со списком потенциальный доход");
+//
 //        }
+        System.out.println(" Работа со списком потенциальный доход");
         onWallet3(scanner.nextInt());
         return menu09();
     }
@@ -588,8 +594,9 @@ public class Menu {
 //            System.out.println(" Работа со списком потенциальный доход");
 //        }
 //        else{
-//            System.out.println(" Работа со списком потенциальный доход");
+//
 //        }
+        System.out.println(" Работа со списком потенциальный доход");
         onWallet2(scanner.nextInt());
         return menu10();
     }
@@ -601,8 +608,9 @@ public class Menu {
 //           System.out.println(" Работа со списком потенциальный затрат\n");
 //        }
 //        else {
-//           System.out.println(" Работа со списком потенциальный затрат\n");
+//
 //         }
+        System.out.println(" Работа со списком потенциальный затрат\n");
         onWallet3(scanner.nextInt());
         return menu11();
     }
