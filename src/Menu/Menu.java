@@ -603,7 +603,7 @@ public class Menu {
 //        else {
 //           System.out.println(" Работа со списком потенциальный затрат\n");
 //         }
-        onWallet2(scanner.nextInt());
+        onWallet3(scanner.nextInt());
         return menu11();
     }
 
