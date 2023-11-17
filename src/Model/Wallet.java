@@ -30,7 +30,9 @@ public class Wallet {
     public void deleteCheques(int chequeSum){
         cheques.remove(chequeSum);
     }
-
+    public void delete(Wallet wallet){
+        this.credit_cards.remove(wallet);
+    }
     public void delete(Credit_card credit_cards){
         this.credit_cards.remove(credit_cards);
     }

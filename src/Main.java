@@ -33,7 +33,11 @@ public class Main {
 
         mywallet.setCredit_cards(credit_card);
         System.out.println(mywallet.toString());
-
+        mywallet.delete(credit_card);
+        System.out.println(mywallet.toString());
+        System.out.println(mywallet.toString());
+        mywallet.delete(mywallet);
+        System.out.println(mywallet.toString());
 //        Wallet mywallet = new Wallet();
 //        Credit_card credit_card = new Credit_card("Tinkoff", 5000);
 //        Scanner scanner = new Scanner(System.in);
@@ -55,8 +59,7 @@ public class Main {
 //        mywallet.addCheques(100);
 //        mywallet.addCheques(2000);
 //        mywallet.addCheques(300);
-//        mywallet.addCredit_cards("BTB", 25000);
-//        mywallet.addCredit_cards("Visa", 50000);
+
 //        credit_card.addCredit_cards("MasterCard", 26000);
 //        credit_card.deleteCredit_cards("Visa", 15000);
 //        credit_card.credit_cardsSumma();
