@@ -17,10 +17,10 @@ public class Operation {
 
     public Menu menu(Wallet wallet) {
         Menu menu = new Menu();
-       menu.menu01();
+        menu.menu01();
         System.out.println("1:Открыть кошелёк");
-       menu.menu02();
-       wallet.allSumma();
+        menu.menu02();
+//       wallet.allSumma();
         System.out.println("2:Получение деньги по всем кошелькам");
        menu.menu03();
        wallet.addCheques(100);
@@ -37,12 +37,12 @@ public class Operation {
         System.out.println("5:Открыть кредитную карту");
         menu.menu06();
         System.out.println("6:Добавить кредитную карту\n");
-        credit_card.addCredit_cards("Tinroff", 25000);
+//        credit_card.addCredit_cards("Tinroff", 25000);
         menu.menu07();
         System.out.println("7:Получение деньги по всем картам\n");
-        credit_card.credit_cardsSumma();
-        menu.menu08();
-        credit_card.credit_cardsSumma();
+//        credit_card.credit_cardsSumma();
+         menu.menu08();
+//        credit_card.credit_cardsSumma();
         System.out.println("получения общей суммы по всем кошелькам и картам\n ");
         return menu;
     }
@@ -99,7 +99,7 @@ public class Operation {
         System.out.println("7:Удаление редактирование информации кошелька\n");
     }
     public void menu8(){
-        System.out.println("8получения общей суммы по всем кошелькам и картам ");
+        System.out.println("8:получения общей суммы по всем кошелькам и картам ");
     }
    public void menu9(){
        System.out.println("9:Работа со списком текущих затрат\n");
