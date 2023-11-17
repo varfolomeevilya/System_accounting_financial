@@ -79,11 +79,6 @@ public class Menu {
         } else {
             System.out.println(" Работа со списком потенциальный доход\n");
         }
-        if (menu12() == 12) {
-//            wallet.deleteCredit_cards("Tinkoff", 50000);
-        } else {
-            System.out.println("Удаление редактирование информацию кредитной карты\n");
-        }
     }
 
 
