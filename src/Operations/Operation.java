@@ -4,7 +4,7 @@ import Costs.Current_costs;
 import Costs.Potential_costs;
 import Costs.Potential_income;
 import Model.Credit_card;
-import Model.Wallet;
+import Model.Working_map;
 import Menu.Menu;
 
 
@@ -15,7 +15,7 @@ public class Operation {
     public Operation() {
     }
 
-    public Menu menu(Wallet wallet) {
+    public Menu menu(Working_map wallet) {
         Menu menu = new Menu();
         menu.menu01();
         System.out.println("1:Открыть кошелёк");
@@ -96,7 +96,7 @@ public class Operation {
         System.out.println("6:Добавить кредитную карту\n");
     }
     public void menu7(){
-        System.out.println("7:Удаление редактирование информации кошелька\n");
+        System.out.println("7:Получение деньги по всем картам\n");
     }
     public void menu8(){
         System.out.println("8:получения общей суммы по всем кошелькам и картам ");

@@ -1,12 +1,7 @@
 
 
 import Model.Credit_card;
-import Model.Wallet;
-import Operations.Operation;
-import Menu.Menu;
-
-
-import java.util.Scanner;
+import Model.Working_map;
 
 // Система хранит следующую информацию:
 //        кошельки (название кошелька, сумма в нем и т.д.);
@@ -28,16 +23,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Wallet mywallet = new Wallet();
+        Working_map working_map = new Working_map();
         Credit_card credit_card = new Credit_card("Tinkoff", 5000);
-
-        mywallet.setCredit_cards(credit_card);
-        System.out.println(mywallet.toString());
-        mywallet.delete(credit_card);
-        System.out.println(mywallet.toString());
-        System.out.println(mywallet.toString());
-        mywallet.delete(mywallet);
-        System.out.println(mywallet.toString());
+        
+//        mywallet.setCredit_cards(credit_card);
+//        System.out.println(mywallet.toString());
+//        mywallet.delete(credit_card);
+//        System.out.println(mywallet.toString());
+//        System.out.println(mywallet.toString());
+//        mywallet.delete(mywallet);
+//        System.out.println(mywallet.toString());
 //        Wallet mywallet = new Wallet();
 //        Credit_card credit_card = new Credit_card("Tinkoff", 5000);
 //        Scanner scanner = new Scanner(System.in);
@@ -59,17 +54,16 @@ public class Main {
 //        mywallet.addCheques(100);
 //        mywallet.addCheques(2000);
 //        mywallet.addCheques(300);
-
+//
 //        credit_card.addCredit_cards("MasterCard", 26000);
 //        credit_card.deleteCredit_cards("Visa", 15000);
 //        credit_card.credit_cardsSumma();
-////
+//
 //        System.out.println(mywallet.credit_cardsSumma());
 //        System.out.println(mywallet.chequesSumma());
 //        System.out.println(mywallet.allSumma());
 //        mywallet.setCredit_cards(credit_card);
 //        mywallet.toString();
-//        System.out.println(mywallet.getCurrent_costs());
 //        Menu menu = new Menu();
 //        menu.menu01();
 //        menu.menu02();
@@ -82,7 +76,7 @@ public class Main {
 //        menu.menu09();
 //        menu.menu10();
 //        menu.menu11();
-//        menu.menu12();
+//
 //        menu.toString();
 //        Operation operation= new Operation();
 //        operation.menu1();
@@ -96,7 +90,7 @@ public class Main {
 //        operation.menu9();
 //        operation.menu10();
 //        operation.menu11();
-//        operation.menu12();
+//
 //       menu.menuController();
 //       menu.onWallet1(i);
 //       menu.onWallet2(i);

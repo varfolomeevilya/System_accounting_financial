@@ -3,11 +3,11 @@ package Menu;
 import Costs.Current_costs;
 import Costs.Potential_costs;
 import Costs.Potential_income;
-import Model.Wallet;
+import Model.Working_map;
 import java.util.Scanner;
 
 public class Menu {
-    private Wallet wallet;
+    private Working_map working_map;
 
     private Current_costs current_costs;
     private Potential_costs potential_costs;
@@ -17,8 +17,8 @@ public class Menu {
     public Menu() {
     }
 
-    public Menu(Wallet wallet, Current_costs current_costs, Potential_costs potential_costs, Potential_income potential_income) {
-        this.wallet = wallet;
+    public Menu(Working_map working_map, Current_costs current_costs, Potential_costs potential_costs, Potential_income potential_income) {
+        this.working_map = working_map;
         this.current_costs = current_costs;
         this.potential_costs = potential_costs;
         this.potential_income = potential_income;
@@ -29,55 +29,62 @@ public class Menu {
             System.out.println("Открыть кошелек\n");
         }
         if (menu02() == 2) {
-//            wallet.allSumma();
+//          System.out.println(working_map.allSumma());
         } else {
             System.out.println("Получение деньги кошелька\n");
         }
         if (menu03() == 3) {
-            wallet.addCheques(100);
+            System.out.println();
+            working_map.addCheques(100);
         } else {
-            System.out.println("Добавление деньги в кошелька\n");
+            System.out.println("Добавление редактирование информацию кошелька\n");
         }
         if (menu04() == 4) {
-            wallet.deleteCheques(2000);
+           working_map.deleteCheques(2000);
         } else {
-            System.out.println("Удаление деньги  кошелька\n");
+            System.out.println("Удаление  редактирование информацию кошелька\n");
         }
         if (menu05() == 5) {
             System.out.println("Открыть кредитную карту\n");
         }
         if (menu06() == 6) {
-//            wallet.addCredit_cards("visa", 25000);
+//            System.out.println(working_map.addCredit_cards("visa", 25000));
         } else {
             System.out.println("Добавить редактирование информацию кредитной карты\n");
         }
         if (menu07() == 7) {
-//            wallet.deleteCredit_cards("Mastercard", 50000);
+//           working_map.deleteCredit_cards("Mastercard", 50000);
         } else {
             System.out.println("Удаление редактирование информацию кредитной карты\n");
+
         }
         if (menu08() == 8) {
-//            wallet.credit_cardsSumma();
+//           System.out.println(working_map.credit_cardsSumma());
         } else {
             System.out.println("получения общей суммы по всем кошелькам и картам \n");
         }
         if (menu09() == 9) {
-            current_costs.getStr();
-            current_costs.getPrice();
+            System.out.println(current_costs.getStr());
+
         } else {
             System.out.println(" Работа со списком текущих затрат\n");
+            System.out.println(current_costs.getPrice());
         }
         if (menu10() == 10) {
-            potential_costs.getStr();
-            potential_costs.getPrice();
+            System.out.println(potential_costs.getStr());
+
         } else {
             System.out.println(" Работа со списком потенциальный затрат\n");
+
+            System.out.println(potential_costs.getPrice());
         }
         if (menu11() == 11) {
-            potential_income.getPrize();
-            potential_income.getSalary();
+            System.out.println(potential_income.getPrize());
+            System.out.println("Введите премию");
         } else {
             System.out.println(" Работа со списком потенциальный доход\n");
+            System.out.println("Введите зарплату");
+            System.out.println(potential_income.getSalary());
         }
     }
 
@@ -100,14 +107,14 @@ public class Menu {
             }
             case 3 -> {
                 if (menu03() == 3) {
-                    wallet.addCheques(100);
+                    working_map.addCheques(100);
                 } else {
                     System.out.println("Добавление деньги в кошелька");
                 }
             }
             case 4 -> {
                 if (menu04() == 4) {
-                    wallet.deleteCheques(2000);
+                    working_map.deleteCheques(2000);
                 } else {
                     System.out.println("Удаление деньги  кошелька");
                 }
@@ -135,17 +142,17 @@ public class Menu {
             }
             case 3 -> {
                 if (menu03() == 3) {
-                    wallet.addCheques(3100);
+                    working_map.addCheques(3100);
                 } else {
-                    System.out.println("Добавление деньги в кошелька");
+                    System.out.println("Добавление  редактирование информацию  в кошелька");
                 }
 
             }
             case 4 -> {
                 if (menu04() == 4) {
-                    wallet.deleteCheques(300);
+                    working_map.deleteCheques(300);
                 } else {
-                    System.out.println("Удаление деньги информации кошелька");
+                    System.out.println("Удаление редактирование информацию  кошелька");
                 }
             }
             case 5 -> {
@@ -155,7 +162,7 @@ public class Menu {
             }
             case 6 -> {
                 if (menu06() == 6) {
-//                    wallet.addCredit_cards("Visa", 25000);
+//                    working_map.addCredit_cards("Visa", 25000);
                 } else {
                     System.out.println("Добавить редактирование информацию кредитной карты");
                 }
@@ -194,7 +201,7 @@ public class Menu {
             }
             case 3 -> {
                 if (menu03() == 3) {
-                    wallet.addCheques(3100);
+                    working_map.addCheques(3100);
                 } else {
                     System.out.println("добавления, удаления, редактирования информации кошелька");
                 }
@@ -202,7 +209,7 @@ public class Menu {
             }
             case 4 -> {
                 if (menu04() == 4) {
-                    wallet.deleteCheques(300);
+                    working_map.deleteCheques(300);
                 } else {
                     System.out.println("Удаление  информации кошелька");
                 }
@@ -292,7 +299,7 @@ public class Menu {
             }
             case 3 -> {
                 if (menu03() == 3) {
-                    wallet.addCheques(100);
+                    working_map.addCheques(100);
                 } else {
                     System.out.println("Добавление деньги в кошелька");
                 }
@@ -300,7 +307,7 @@ public class Menu {
             }
             case 4 -> {
                 if (menu04() == 4) {
-                    wallet.deleteCheques(2000);
+                    working_map.deleteCheques(2000);
                 } else {
                     System.out.println("Удаление деньги  кошелька");
                 }
@@ -330,14 +337,14 @@ public class Menu {
             }
             case 3 -> {
                 if (menu03() == 3) {
-                    wallet.addCheques(100);
+                    working_map.addCheques(100);
                 } else {
                     System.out.println("Добавление деньги в кошелька");
                 }
             }
             case 4 -> {
                 if (menu04() == 4) {
-                    wallet.deleteCheques(2000);
+                    working_map.deleteCheques(2000);
                 } else {
                     System.out.println("Удаление деньги  кошелька");
                 }
@@ -382,7 +389,7 @@ public class Menu {
             }
             case 2 -> {
                 if (menu02() == 2) {
-//                    wallet.allSumma();
+//                    working_map.allSumma();
                 } else {
                     System.out.println("Получение деньги кошелька");
                 }
@@ -390,7 +397,7 @@ public class Menu {
             }
             case 3 -> {
                 if (menu03() == 3) {
-                    wallet.addCheques(3100);
+                    working_map.addCheques(3100);
                 } else {
                     System.out.println("Добавление деньги в кошелька");
                 }
@@ -398,7 +405,7 @@ public class Menu {
             }
             case 4 -> {
                 if (menu04() == 4) {
-                    wallet.deleteCheques(300);
+                   working_map.deleteCheques(300);
                 } else {
                     System.out.println("Удаление деньги  кошелька");
                 }
@@ -412,7 +419,7 @@ public class Menu {
             }
             case 6 -> {
                 if (menu06() == 6) {
-//                    wallet.addCredit_cards("Visa", 25000);
+//                    working_map.addCredit_cards("Visa", 25000);
                 } else {
                     System.out.println("Добавить редактирование информацию кредитной карты");
                     System.out.println();
@@ -421,7 +428,7 @@ public class Menu {
             }
             case 7 -> {
                 if (menu07() == 7) {
-//                    wallet.deleteCredit_cards("Mastercard", 50000);
+//                    working_map.deleteCredit_cards("Mastercard", 50000);
                 } else {
                     System.out.println("7:Получение деньги по всем картам\n");
                 }
@@ -622,10 +629,11 @@ public class Menu {
     @Override
     public String toString() {
         return "Menu{" +
-                "wallet=" + wallet +
+                "working_map=" + working_map +
                 ", current_costs=" + current_costs +
                 ", potential_costs=" + potential_costs +
                 ", potential_income=" + potential_income +
+                ", scanner=" + scanner +
                 '}';
     }
 }

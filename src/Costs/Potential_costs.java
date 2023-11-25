@@ -38,4 +38,5 @@ public class Potential_costs {
                 ", price=" + price +
                 '}';
     }
+
 }

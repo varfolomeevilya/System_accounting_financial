@@ -1,17 +1,18 @@
 package Model;
 
 
-public class Credit_card {
-    private String name;
+public class Credit_card extends Wallet1{
+    private String str;
     private int summa;
 
     public Credit_card() {
-        this.name = "Tinkoff";
+        this.str = "Tinkoff";
         this.summa = 135;
     }
 
-    public Credit_card(String name, int summa) {
-        this.name = name;
+    public Credit_card(String str, int summa) {
+        super(str, summa);
+        this.str = str;
         this.summa = summa;
     }
 
@@ -23,12 +24,12 @@ public class Credit_card {
         this.summa -= summa;
     }
 
-    public String getName() {
-        return name;
+    public String getStr() {
+        return str;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStr(String str) {
+        this.str = str;
     }
 
     public int getSumma() {
@@ -42,7 +43,7 @@ public class Credit_card {
     @Override
     public String toString() {
         return "Credit_card{" +
-                "name='" + name + '\'' +
+                "str='" + str + '\'' +
                 ", summa=" + summa +
                 '}';
     }
