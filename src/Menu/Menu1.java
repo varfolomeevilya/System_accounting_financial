@@ -1,6 +1,7 @@
 package Menu;
 
 
+import Model.Credit_card;
 import Model.Wallet;
 import Model.Working_map;
 
@@ -29,6 +30,7 @@ public class Menu1 {
        System.out.println("Введите цифру");
        Working_map working_map = new Working_map();
        Wallet wallet = new Wallet();
+       Credit_card credit_card = new Credit_card();
         while (true){
             Scanner scanner =new Scanner(System.in);
             switch (scanner.nextInt()){
@@ -45,6 +47,7 @@ public class Menu1 {
                   working_map.credit_cardsName("Cber");
                 case 6:
                     working_map.setCredit_cards("Alpha", 0);
+                    working_map.delete(credit_card);
                 case 7:
                      working_map.credit_cardsSumma();
                 case 8:
