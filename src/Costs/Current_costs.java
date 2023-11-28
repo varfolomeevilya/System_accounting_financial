@@ -3,24 +3,24 @@ package Costs;
 import Cheques.Cheque;
 
 public class Current_costs{
-    private String str;
+    private String name;
     private double price;
     public Current_costs(){
-        this.str="Купить одежду";
-        this.price= 79.50;
+        this.name=null;
+        this.price= 0;
     }
 
-    public Current_costs(String str, double price) {
-        this.str = str;
+    public Current_costs(String name, double price) {
+        this.name = name;
         this.price = price;
     }
 
-    public String getStr() {
-        return str;
+    public String getName() {
+        return name;
     }
 
-    public void setStr(String str) {
-        this.str = str;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getPrice() {
@@ -34,7 +34,7 @@ public class Current_costs{
     @Override
     public String toString() {
         return "Current_costs{" +
-                "str='" + str + '\'' +
+                "name='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }

@@ -3,24 +3,24 @@ package Costs;
 
 
 public class Potential_costs {
-    private String str;
+    private String name;
     private double price;
     public Potential_costs(){
-        this.str="Купить машину";
-        this.price = 1.1250000;
+        this.name = null;
+        this.price = 0;
     }
 
-    public Potential_costs(String str, double price) {
-        this.str = str;
+    public Potential_costs(String name, double price) {
+        this.name = name;
         this.price = price;
     }
 
-    public String getStr() {
-        return str;
+    public String getName() {
+        return name;
     }
 
-    public void setStr(String str) {
-        this.str = str;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getPrice() {
@@ -34,9 +34,8 @@ public class Potential_costs {
     @Override
     public String toString() {
         return "Potential_costs{" +
-                "str='" + str + '\'' +
+                "name='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }
-
 }

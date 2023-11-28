@@ -3,39 +3,39 @@ package Costs;
 import Cheques.Cheque;
 
 public class Potential_income {
-    private int prize;  // создал два поля
-    private int salary;
+    private String name;  // создал два поля
+    private double summa;
     public Potential_income(){ // создал конструктор пустой
-        this.prize = 10;
-        this.salary= 15000;
+        this.name = null;
+        this.summa= 0;
     }
 
-    public Potential_income(int prize, int salary) { // создал конструктор по умолчание
-        this.prize = prize;
-        this.salary = salary;
+    public Potential_income(String name, double summa) { // создал конструктор по умолчание
+        this.name = name;
+        this.summa = summa;
     }
 
-    public int getPrize() {  // создал гет премия
-        return prize;
+    public String getName() {
+        return name;
     }
 
-    public void setPrize(int prize) { // создал сет премия
-        this.prize = prize;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getSalary() { // создал гет зарплата
-        return salary;
+    public double getSumma() {
+        return summa;
     }
 
-    public void setSalary(int salary) {  // создал  сет зарплата
-        this.salary = salary;
+    public void setSumma(double summa) {
+        this.summa = summa;
     }
 
     @Override
     public String toString() {
         return "Potential_income{" +
-                "prize=" + prize +
-                ", salary=" + salary +
+                "name='" + name + '\'' +
+                ", summa=" + summa +
                 '}';
     }
 }
