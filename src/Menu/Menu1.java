@@ -120,36 +120,38 @@ public class Menu1 {
                     System.out.println(working_map.credit_cardsShow().toString());
                     break;
                 case 14:
-                    scanner = new Scanner(System.in);
+
                     System.out.println("Работа списком текущщих затрат");
                     int v = scanner.nextInt();
                     if (v == 1) {
-                        temp = scanner.nextLine();
-                        in = scanner.nextInt();
+                        Scanner scanner2 = new Scanner(System.in);
+                        temp = scanner2.nextLine();
+                        in = scanner2.nextInt();
                         working_map.setCurrent_costs(temp, in);
                     } else if (v == 2) {
                         System.out.println( working_map.current_costsShow().toString());
                     }
                     break;
                 case 15:
-                    scanner=new Scanner(System.in);
+
                     System.out.println("Работа списком потенциальных затрат");
                     int j = scanner.nextInt();
                     if (j == 1) {
-                        temp = scanner.nextLine();
-                        in = scanner.nextInt();
+                        Scanner scanner2 = new Scanner(System.in);
+                        temp = scanner2.nextLine();
+                        in = scanner2.nextInt();
                         working_map.setPotential_costs(temp, in);
                     } else if (j == 2) {
                         System.out.println(working_map.potential_costsShow().toString());
                     }
                     break;
                 case 16:
-                    scanner=new Scanner(System.in);
                     System.out.println("Работа списком потенциальных доходов");
                     int k = scanner.nextInt();
                     if (k == 1) {
-                        temp = scanner.nextLine();
-                        in = scanner.nextInt();
+                      Scanner scanner2=new Scanner(System.in);
+                        temp = scanner2.nextLine();
+                        in = scanner2.nextInt();
                         working_map.setPotential_incomes(temp, in);
                     } else if (k == 2) {
                         System.out.println(working_map.potential_incomeShow().toString());

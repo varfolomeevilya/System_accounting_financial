@@ -190,6 +190,12 @@ public class Working_map {
     public String potential_incomeShow(){ // информации потенциальных доходов
         return potential_incomes.toString();
     }
+    public String walletsShow(){ // вывод информации всем кошелькам
+        return wallets.toString();
+    }
+    public String credit_cardsShow(){ // выод информации всем кредитным картам
+        return credit_cards.toString();
+    }
     @Override
     public String toString() {
         return "Working_map{" +

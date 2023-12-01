@@ -24,7 +24,5 @@ public class Main {
         System.out.println(menu1.menuController());
         menu1.menuShow();
 
-
-
     }
 }
